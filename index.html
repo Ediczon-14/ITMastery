@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Mastery | Cursos Online con Certificación</title>
+    <meta name="description"
+        content="Aprende desarrollo web, datos y seguridad en IT Mastery. Valida tus certificados online.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="logo">IT Mastery</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="#cursos" class="nav-link">Cursos</a></li>
+                    <li><a href="#validar" class="nav-link">Validar certificado</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1 class="hero-title">IT Mastery</h1>
+            <p class="hero-subtitle">Cursos online con certificación</p>
+            <div class="hero-buttons">
+                <a href="#cursos" class="btn btn-primary">Ver cursos</a>
+                <a href="#validar" class="btn btn-outline">Validar certificado</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Cursos -->
+    <section class="cursos section" id="cursos">
+        <div class="container">
+            <h2 class="section-title">Nuestros Cursos</h2>
+            <div class="cursos-grid">
+                <!-- Curso 1 -->
+                <div class="curso-card">
+                    <img src="web_dev.png" class="curso-img" alt="Desarrollo Web Full Stack">
+                    <div class="curso-info">
+                        <h3>Desarrollo Web Full Stack</h3>
+                        <p>Aprende HTML, CSS, JavaScript, React y Node.js desde cero hasta un nivel profesional.</p>
+                    </div>
+                </div>
+                <!-- Curso 2 -->
+                <div class="curso-card">
+                    <img src="js_course.png" class="curso-img" alt="JavaScript Básico y Avanzado">
+                    <div class="curso-info">
+                        <h3>JavaScript Básico y Avanzado</h3>
+                        <p>Domina el lenguaje de la web, crea interactividad y lógica de programación sólida.</p>
+                    </div>
+                </div>
+                <!-- Curso 3 -->
+                <div class="curso-card">
+                    <img src="cyber_course.png" class="curso-img" alt="Ciberseguridad Básica">
+                    <div class="curso-info">
+                        <h3>Ciberseguridad Básica</h3>
+                        <p>Protege sistemas y redes aprendiendo los fundamentos esenciales del hacking ético.</p>
+                    </div>
+                </div>
+                <!-- Curso 4 -->
+                <div class="curso-card">
+                    <img src="python_course.png" class="curso-img" alt="Python para Data Science">
+                    <div class="curso-info">
+                        <h3>Python para Data Science</h3>
+                        <p>Domina el análisis de datos, aprende a estructurar y visualizar información clave.</p>
+                    </div>
+                </div>
+                <!-- Curso 5 -->
+                <div class="curso-card">
+                    <img src="support_course.png" class="curso-img" alt="Especialista en Soporte Técnico">
+                    <div class="curso-info">
+                        <h3>Especialista en Soporte Técnico</h3>
+                        <p>Domina el mantenimiento, diagnóstico y solución de problemas en hardware y software.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Validador de Certificados -->
+    <section class="validador section" id="validar">
+        <div class="container">
+            <div class="validador-container">
+                <h2 class="section-title">Validar certificado</h2>
+                <p class="validador-desc">Ingresa el código único de tu certificado para verificar su autententicidad y
+                    validez oficial.</p>
+
+                <form id="validador-form" class="validador-form">
+                    <input type="text" id="codigo-input" placeholder="Ej: ABC123" required autocomplete="off">
+                    <button type="submit" class="btn btn-primary">Validar</button>
+                </form>
+
+                <div id="resultado" class="resultado">
+                    <!-- Resultado dinámico será inyectado por JavaScript aquí -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section class="nosotros section" id="nosotros">
+        <div class="container">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <div class="nosotros-content">
+                <div class="nosotros-text">
+                    <h3>La Educación está Evolucionando</h3>
+                    <p>En <strong>IT Mastery</strong> entendemos que el mundo tecnológico avanza a pasos agigantados. Lo
+                        que ayer era una innovación absoluta, hoy se ha convertido en el estándar de la industria, y
+                        mañana será el requisito base.</p>
+                    <p>La capacitación constante ha dejado de ser una opción para convertirse en una necesidad vital y
+                        estratégica. Nuestra misión es potenciar las habilidades de los futuros expertos tecnológicos,
+                        proporcionando una educación práctica, ágil y perfectamente alineada con las altísimas
+                        exigencias del mercado.</p>
+                    <p>¡Fórmate continuamente, adapta tus conocimientos y mantente siempre a la vanguardia como un
+                        profesional competitivo!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2023 IT Mastery. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts de Lógica -->
+    <script src="script.js"></script>
+</body>
+
+</html>

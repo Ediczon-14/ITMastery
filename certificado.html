@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificado - Ediczon Clooney Mayta Mamani</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cert-container {
+            width: 1000px;
+            height: 700px;
+            background-color: #fff;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            box-sizing: border-box;
+            background-image: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(240, 245, 255, 1) 100%);
+            border: 2px solid #005A9C;
+            margin: 40px 20px;
+        }
+
+        /* Borde decorativo */
+        .cert-border {
+            border: 5px double #005A9C;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            box-sizing: border-box;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20 L80 20 L80 80 L20 80 Z' fill='none' stroke='%23005A9C' stroke-width='0.5' stroke-dasharray='5,5' opacity='0.2'/%3E%3C/svg%3E");
+        }
+
+        .cert-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .cert-logo {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+            color: #0d1b2a;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .cert-logo span {
+            color: #00b4d8;
+        }
+
+        .cert-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            color: #0d1b2a;
+            margin: 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .cert-subtitle {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .cert-body {
+            text-align: center;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .cert-presented {
+            font-size: 1.1rem;
+            color: #495057;
+            margin-bottom: 15px;
+        }
+
+        .cert-name {
+            font-family: 'Cinzel', serif;
+            font-size: 2.4rem;
+            color: #005A9C;
+            font-weight: bold;
+            margin: 10px 0;
+            border-bottom: 2px solid #ced4da;
+            display: inline-block;
+            padding: 0 40px 10px;
+            line-height: 1.2;
+        }
+
+        .cert-reason {
+            font-size: 1.0rem;
+            color: #495057;
+            margin: 5px auto;
+            max-width: 80%;
+            line-height: 0.9;
+        }
+
+        .cert-course {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #0d1b2a;
+            margin: 5px 0 1px 0;
+            letter-spacing: 1px;
+        }
+
+        .cert-details {
+            font-size: 0.9rem;
+            color: #343a40;
+            margin-top: 1px;
+        }
+
+        .cert-footer {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 50px;
+            position: static;
+            bottom: 10px;
+        }
+
+        .cert-signature {
+            text-align: center;
+            width: 200px;
+        }
+
+        .cert-signature-line {
+            border-bottom: 1px solid #000;
+            height: 1px;
+            margin-bottom: 10px;
+            font-family: 'Inter', cursive;
+            font-style: italic;
+            font-size: 1.0rem;
+            color: #0d1b2a;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .cert-stamp {
+            position: absolute;
+            right: 60px;
+            bottom: 60px;
+            width: 130px;
+            height: 130px;
+            border: 4px solid #005A9C;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #005A9C;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            text-align: center;
+            transform: rotate(-8deg);
+            opacity: 0.85;
+            box-shadow: inset 0 0 10px rgba(0, 90, 156, 0.2);
+            background: #fff;
+            letter-spacing: 1px;
+            z-index: 2;
+        }
+
+        .cert-stamp::before {
+            content: '';
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            border: 2px dashed #005A9C;
+            border-radius: 50%;
+        }
+
+        /* Ribbon de medalla simulado */
+        .cert-stamp::after {
+            content: '';
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 45px solid #005A9C;
+            z-index: -1;
+        }
+
+        .cert-qr {
+            position: absolute;
+            left: 60px;
+            bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .cert-qr img {
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            padding: 4px;
+            border: 2px solid #005A9C;
+            border-radius: 8px;
+        }
+
+        .cert-qr span {
+            margin-top: 6px;
+            font-size: 0.75rem;
+            color: #005A9C;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cert-meta {
+            position: absolute;
+            bottom: 15px;
+            font-size: 0.8rem;
+            color: #adb5bd;
+            display: flex;
+            justify-content: space-between;
+            width: calc(100% - 60px);
+        }
+
+        .btn-back {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #0d1b2a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            transition: background 0.3s;
+            z-index: 10;
+        }
+
+        .btn-back:hover {
+            background-color: #00b4d8;
+        }
+
+        @media (max-width: 1050px) {
+            .cert-container {
+                width: 100%;
+                height: auto;
+                min-height: 700px;
+                padding: 20px;
+            }
+
+            .cert-title {
+                font-size: 2.2rem;
+            }
+
+            .cert-name {
+                font-size: 2rem;
+            }
+
+            .cert-course {
+                font-size: 1.4rem;
+            }
+
+            .cert-footer {
+                flex-direction: column;
+                gap: 20px;
+                width: 10%;
+                align-items: center;
+                position: relative;
+                bottom: 0;
+                margin-top: 10px;
+            }
+
+            .cert-stamp {
+                position: relative;
+                right: auto;
+                bottom: auto;
+                margin-top: 30px;
+            }
+
+            .cert-qr {
+                position: relative;
+                left: auto;
+                bottom: auto;
+                margin-top: 20px;
+            }
+
+            .cert-meta {
+                position: relative;
+                width: 100%;
+                bottom: 0;
+                margin-top: 30px;
+                flex-direction: column;
+                text-align: center;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="btn-back">← Volver al inicio</a>
+
+    <div class="cert-container">
+        <div class="cert-border">
+
+            <div class="cert-header">
+                <div class="cert-logo">&lt;/&gt; IT<span>Mastery</span></div>
+                <h1 class="cert-title">Certificado de Especialización</h1>
+                <div class="cert-subtitle">Este documento certifica que</div>
+            </div>
+
+            <div class="cert-body">
+                <div class="cert-name">Ediczon Clooney Mayta Mamani</div>
+
+                <div class="cert-reason">
+                    Ha completado satisfactoriamente los requisitos académicos y prácticos del curso de especialización:
+                </div>
+
+                <div class="cert-course">Especialista de Soporte Técnico</div>
+
+                <div class="cert-details">
+                    <p><strong>Carga Horaria:</strong> 150 horas académicas</p>
+                    <p><strong>Periodo:</strong> Del 12 de Marzo de 2024 al 26 de Abril de 2024</p>
+                </div>
+            </div>
+
+            <div class="cert-footer">
+                <div class="cert-signature" style="width: 400px;">
+                    <div class="cert-signature-line"
+                        style="font-size: 1.3rem; font-family: 'Cinzel', serif; margin-bottom: 5px;"><span>Ing.Enzo
+                            Ruben
+                            Heredia Melendez</span></div>
+                    <div style="font-weight: bold; font-size: 1.1rem; color: #495057; letter-spacing: 1px;">Instructor
+                        Especialista IT</div>
+                </div>
+            </div>
+
+            <div class="cert-stamp">
+                <div style="font-family:'Inter', sans-serif; line-height: 1.4;">
+                    <span style="font-size: 1.5rem;">IT</span><br>
+                    <span
+                        style="color:#00b4d8; font-size: 1rem; font-weight: 800; letter-spacing: 1px;">MASTERY</span><br>
+                    <span style="font-size: 0.65rem; letter-spacing: 2px;">CERTIFIED</span>
+                </div>
+            </div>
+
+            <div class="cert-qr">
+                <img src="qr.png" alt="QR Validación">
+                <span>Validación</span>
+            </div>
+
+            <div class="cert-meta">
+                <span>Fecha de Emisión: 28 de Abril de 2024</span>
+                <span>ID Validación: 73217436</span>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
