@@ -15,10 +15,12 @@
             padding: 0;
             background-color: #f0f4f8;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             min-height: 100vh;
             font-family: 'Inter', sans-serif;
+            padding: 40px 0;
+            gap: 40px;
         }
 
         .cert-container {
@@ -51,7 +53,7 @@
 
         .cert-header {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         .cert-logo {
@@ -316,6 +318,63 @@
                 gap: 5px;
             }
         }
+
+        .modules-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            text-align: left;
+            margin-top: 25px;
+            width: 100%;
+            max-width: 850px;
+        }
+
+        .module-item {
+            background: rgba(0, 90, 156, 0.03);
+            padding: 10px 15px;
+            border-left: 3px solid #005A9C;
+            border-radius: 4px;
+        }
+
+        .module-title {
+            font-weight: 700;
+            color: #005A9C;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        .module-content {
+            font-size: 0.8rem;
+            color: #495057;
+            line-height: 1.4;
+        }
+
+        .cert-info-grid {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 10px;
+        }
+
+        .info-item {
+            font-size: 0.95rem;
+            color: #343a40;
+        }
+
+        .info-item strong {
+            color: #0d1b2a;
+        }
+
+        @media (max-width: 1050px) {
+            .modules-container {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+        }
     </style>
 </head>
 
@@ -371,6 +430,87 @@
                 <img src="qr.png" alt="QR Validación">
                 <span>Validación</span>
             </div>
+
+            <div class="cert-meta">
+                <span>Fecha de Emisión: 28 de Abril de 2025</span>
+                <span>ID Validación: 73217436</span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="cert-container">
+        <div class="cert-border">
+
+            <div class="cert-header"
+                style="position: relative; width: 100%; display: flex; flex-direction: column; align-items: center;">
+
+                <div style="display: flex; align-items: center; gap: 30px;">
+                    <div class="cert-logo">&lt;/&gt; IT<span>Mastery</span></div>
+                    <h1 class="cert-title">Certificado de Especialización</h1>
+                    <div class="cert-qr" style="position: relative; left: auto; bottom: auto; margin: 0;">
+                        <img src="qr.png" alt="QR Validación" style="width: 80px; height: 80px;">
+                        <span style="font-size: 0.65rem;">Validación</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-body">
+                <div class="cert-info-grid">
+                    <div class="info-item"><strong>Curso de Especialización:</strong> Soporte Tecnico</div>
+                    <div class="info-item"><strong>Instructor:</strong> Ing. Enzo Ruben Heredia Melendez</div>
+                    <div class="info-item"><strong>CIP:</strong> 99583</div>
+
+
+                </div>
+                <div class="cert-info-grid">
+                    <div class="info-item"><strong>Participante:</strong> Ediczon Clooney Mayta Mamani</div>
+                    <div class="info-item"><strong>DNI:</strong> 73217436</div>
+                    <div class="info-item"><strong>Nota Final:</strong> 18/20</div>
+                </div>
+
+                <div class="cert-reason" style="margin-top: 15px; font-weight: 600; color: #005A9C;">
+                    TEMARIO DE ESPECIALIZACIÓN:
+                </div>
+
+                <div class="modules-container">
+                    <div class="module-item">
+                        <div class="module-title">1. Fundamentos de Soporte Técnico</div>
+                        <div class="module-content">Diagnóstico de hardware y software. Tipos de mantenimiento
+                            (preventivo y correctivo).</div>
+                    </div>
+                    <div class="module-item">
+                        <div class="module-title">2. Sistemas Operativos</div>
+                        <div class="module-content">Instalación y configuración de Windows y Linux. Gestión de usuarios
+                            y permisos.</div>
+                    </div>
+                    <div class="module-item">
+                        <div class="module-title">3. Redes y Conectividad</div>
+                        <div class="module-content">Configuración de redes LAN. Direccionamiento IP y resolución de
+                            problemas.</div>
+                    </div>
+                    <div class="module-item">
+                        <div class="module-title">4. Soporte y Atención al Usuario</div>
+                        <div class="module-content">Mesa de ayuda (Help Desk). Gestión de incidencias.</div>
+                    </div>
+                    <div class="module-item">
+                        <div class="module-title">5. Seguridad Informática</div>
+                        <div class="module-content">Protección contra malware. Buenas prácticas de ciberseguridad.</div>
+                    </div>
+                    <div class="module-item">
+                        <div class="module-title">6. Herramientas y Automatización</div>
+                        <div class="module-content">Uso de software de monitoreo. Scripts básicos para soporte.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-footer">
+                <div class="cert-signature" style="width: 450px;">
+
+                </div>
+            </div>
+
+
 
             <div class="cert-meta">
                 <span>Fecha de Emisión: 28 de Abril de 2025</span>
